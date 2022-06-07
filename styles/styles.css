@@ -1,0 +1,45 @@
+body {
+    margin: 0;
+    font-family: "Open-Sans", sans-serif;
+    color: rgb(44, 41, 44);
+    background-color: rgb(247, 239, 247);
+}
+
+#main-header {
+    /* purple color */
+    background-color: rgb(140, 0, 255);
+    color: white;
+    padding: 2rem 5%;
+    text-align: center;
+}
+
+.btn{
+    font: inherit;
+    padding: 0.5rem 1.5rem;
+    /* purple color */
+    background-color: rgb(140, 0, 255);
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+
+.btn-alternative{
+    background-color: transparent;
+    border-color: transparent;
+    /* purple color */
+    color: rgb(140, 0, 255);
+}
+
+.btn:hover{
+/* DARKER purple color */
+background-color: rgb(105, 0, 192);
+border-color: rgb(105, 0, 192);  
+}
+
+.btn-alternative:hover{
+    /* LIGHTER purple color */
+    background-color: rgb(208, 160, 245);
+    color: rgb(87, 0, 158);
+    border-color: transparent; 
+}

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Mochiy+Pop+P+One&family=Open+Sans:ital,wght@0,700;1,400&family=Roboto:ital,wght@0,300;0,400;0,700;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/overlay.css">
+    <link rel="stylesheet" href="styles/configuration.css">
+    <link rel="stylesheet" href="styles/game.css">
+    <title>Tic Tac Toe</title>
+  </head>
+  <body>
+      <div id="backdrop"></div>
+    <header id="main-header">
+      <h1>Play Tic Tac Toe</h1>
+      <p>
+        Build with HTML, CSS, javaScript and - of course - loooots of looove!
+      </p>
+    </header>
+    <main>
+      <aside class="modal" id="config-overlay">
+        <h2>Choose your name</h2>
+        <form>
+          <div class="form-control">
+            <label for="playername">Player Name</label>
+            <input type="text" name="username" id="playername" />
+          </div>
+          <div id="button-div">
+            <button type="button" class="btn btn-alternative">Cancel</button>
+            <button type="submit" class="btn">Confirm</button>
+          </div>
+        </form>
+      </aside>
+      <!------------------------- CONFIGURATION AREA --------------------------->
+      <section id="game-configuration">
+        <ol>
+          <li>
+            <article>
+              <h2>Player 1</h2>
+              <h3>PLAYER NAME</h3>
+              <p class="simbols">X</p>
+              <button class="btn btn-alternative">Edit</button>
+            </article>
+          </li>
+          <li>
+            <article>
+              <h2>Player 2</h2>
+              <h3>PLAYER NAME</h3>
+              <p class="simbols">O</p>
+              <button class="btn btn-alternative">Edit</button>
+            </article>
+          </li>
+        </ol>
+        <button id="start-button" class="btn" >Start new Game</button>
+      </section>
+       <!------------------------- Game section area --------------------------->
+      <section id="active-game">
+        <article id="game-over">
+          <h2><span id="winner">Player X</span> won!</h2>
+          <p>Click "Start new game"</p>
+        </article>
+        <p>It is your turn <span id="active-player-name">PLAYER NAME</span>!</p>
+        <ol>
+          <li></li>
+          <li></li>
+          <li></li>
+
+          <li></li>
+          <li></li>
+          <li></li>
+
+          <li></li>
+          <li></li>
+          <li></li>
+        </ol>
+      </section>
+    </main>
+    <footer></footer>
+  </body>
+</html>
