@@ -1,4 +1,4 @@
-.modal{
+.modal {
     position: fixed;
     top: 20%;
     left: 5%;
@@ -6,11 +6,11 @@
     background-color: white;
     padding: 1rem;
     border-radius: 6px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
     display: none;
 }
 
-#backdrop{
+#backdrop {
     position: fixed;
     top: 0;
     left: 0;
@@ -20,8 +20,8 @@
     display: none;
 }
 
-@media (min-width: 48rem){
-    .modal{
+@media (min-width: 48rem) {
+    .modal {
         left: calc(50% - 20rem);
         width: 40rem;
     }

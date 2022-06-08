@@ -10,14 +10,17 @@
       href="https://fonts.googleapis.com/css2?family=Mochiy+Pop+P+One&family=Open+Sans:ital,wght@0,700;1,400&family=Roboto:ital,wght@0,300;0,400;0,700;1,700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="styles/styles.css">
-    <link rel="stylesheet" href="styles/overlay.css">
-    <link rel="stylesheet" href="styles/configuration.css">
-    <link rel="stylesheet" href="styles/game.css">
+    <link rel="stylesheet" href="styles/styles.css" />
+    <link rel="stylesheet" href="styles/overlay.css" />
+    <link rel="stylesheet" href="styles/configuration.css" />
+    <link rel="stylesheet" href="styles/game.css" />
+    <script src="scripts/config.js" defer></script>
+    <script src="scripts/game.js" defer></script>
+    <script src="scripts/app.js" defer></script>
     <title>Tic Tac Toe</title>
   </head>
   <body>
-      <div id="backdrop"></div>
+    <div id="backdrop"></div>
     <header id="main-header">
       <h1>Play Tic Tac Toe</h1>
       <p>
@@ -25,6 +28,7 @@
       </p>
     </header>
     <main>
+      <!------------------------- MODAL --------------------------->
       <aside class="modal" id="config-overlay">
         <h2>Choose your name</h2>
         <form>
@@ -33,8 +37,12 @@
             <input type="text" name="username" id="playername" />
           </div>
           <div id="button-div">
-            <button type="button" class="btn btn-alternative">Cancel</button>
-            <button type="submit" class="btn">Confirm</button>
+            <button type="button" class="btn btn-alternative" id="cancel">
+              Cancel
+            </button>
+            <button type="button" class="btn" id="setPlayerNameBtn">
+              Confirm
+            </button>
           </div>
         </form>
       </aside>
@@ -44,33 +52,37 @@
           <li>
             <article>
               <h2>Player 1</h2>
-              <h3>PLAYER NAME</h3>
+              <h3 class="player1-name">PLAYER 1 NAME</h3>
               <p class="simbols">X</p>
-              <button class="btn btn-alternative">Edit</button>
+              <button class="btn btn-alternative" id="edit-player-1-btn">
+                Edit
+              </button>
             </article>
           </li>
           <li>
             <article>
               <h2>Player 2</h2>
-              <h3>PLAYER NAME</h3>
+              <h3 class="player2-name">PLAYER 2 NAME</h3>
               <p class="simbols">O</p>
-              <button class="btn btn-alternative">Edit</button>
+              <button class="btn btn-alternative" id="edit-player-2-btn">
+                Edit
+              </button>
             </article>
           </li>
         </ol>
-        <button id="start-button" class="btn" >Start new Game</button>
+        <button id="start-button" class="btn">Start new Game</button>
       </section>
-       <!------------------------- Game section area --------------------------->
+      <!------------------------- Game section area --------------------------->
       <section id="active-game">
         <article id="game-over">
           <h2><span id="winner">Player X</span> won!</h2>
           <p>Click "Start new game"</p>
         </article>
         <p>It is your turn <span id="active-player-name">PLAYER NAME</span>!</p>
-        <ol>
+        <ol id="game-board">
+          <li class="disabled">X</li>
           <li></li>
-          <li></li>
-          <li></li>
+          <li class="disabled">O</li>
 
           <li></li>
           <li></li>
