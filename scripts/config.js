@@ -3,26 +3,26 @@ function openPlayerConfig() {
   backdrop.style.display = "block";
 }
 
+//PLAYER CAN STILL LEAVE EMPTY....VALIDATION NEEDED
 function setPlayerName() {
-    if(editPlayer1BtnElement == true){
-        console.log(editPlayer1BtnElement);
-        player1name.textContent = playername.value;
-    }else if(editPlayer2BtnElement == true){
-        player2name.textContent = playername.value;
-    }
-//   editPlayer1BtnElement = false;
-//   editPlayer2BtnElement = false;
+  if (editPlayer1BtnElement == true) {
+    player1name.textContent = playername.value;
+  } else if (editPlayer2BtnElement == true) {
+    player2name.textContent = playername.value;
+  }
   modal.style.display = "none";
   backdrop.style.display = "none";
+  event.preventDefault();
 }
 
-function cancelPlayerName() {
+function cancelEditingPlayerName() {
   modal.style.display = "none";
   backdrop.style.display = "none";
   editPlayer1BtnElement = "false";
   editPlayer2BtnElement = "false";
-  console.log(editPlayer1BtnElement);
 }
+
+function validateForm() {}
 
 // playername=
 // setPlayerNameBtn

@@ -34,13 +34,13 @@
         <form>
           <div class="form-control">
             <label for="playername">Player Name</label>
-            <input type="text" name="username" id="playername" />
+            <input type="text" name="username" id="playername" required />
           </div>
           <div id="button-div">
-            <button type="button" class="btn btn-alternative" id="cancel">
+            <button type="reset" class="btn btn-alternative" id="cancel">
               Cancel
             </button>
-            <button type="button" class="btn" id="setPlayerNameBtn">
+            <button type="submit" class="btn" id="setPlayerNameBtn">
               Confirm
             </button>
           </div>
@@ -54,7 +54,11 @@
               <h2>Player 1</h2>
               <h3 class="player1-name">PLAYER 1 NAME</h3>
               <p class="simbols">X</p>
-              <button class="btn btn-alternative" id="edit-player-1-btn">
+              <button
+                type="button"
+                class="btn btn-alternative"
+                id="edit-player-1-btn"
+              >
                 Edit
               </button>
             </article>
@@ -64,13 +68,19 @@
               <h2>Player 2</h2>
               <h3 class="player2-name">PLAYER 2 NAME</h3>
               <p class="simbols">O</p>
-              <button class="btn btn-alternative" id="edit-player-2-btn">
+              <button
+                type="button"
+                class="btn btn-alternative"
+                id="edit-player-2-btn"
+              >
                 Edit
               </button>
             </article>
           </li>
         </ol>
-        <button id="start-button" class="btn">Start new Game</button>
+        <button type="button" id="start-game-button" class="btn">
+          Start new Game
+        </button>
       </section>
       <!------------------------- Game section area --------------------------->
       <section id="active-game">
@@ -80,17 +90,17 @@
         </article>
         <p>It is your turn <span id="active-player-name">PLAYER NAME</span>!</p>
         <ol id="game-board">
-          <li class="disabled">X</li>
-          <li></li>
-          <li class="disabled">O</li>
+          <li id="block1" ></li>
+          <li id="block2"></li>
+          <li id="block3"></li>
 
-          <li></li>
-          <li></li>
-          <li></li>
+          <li id="block4"></li>
+          <li id="block5"></li>
+          <li id="block6" ></li>
 
-          <li></li>
-          <li></li>
-          <li></li>
+          <li id="block7"></li>
+          <li id="block8"></li>
+          <li id="block9"></li>
         </ol>
       </section>
     </main>
