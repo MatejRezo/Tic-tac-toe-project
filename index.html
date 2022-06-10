@@ -17,15 +17,14 @@
     <script src="scripts/config.js" defer></script>
     <script src="scripts/game.js" defer></script>
     <script src="scripts/app.js" defer></script>
+
     <title>Tic Tac Toe</title>
   </head>
   <body>
     <div id="backdrop"></div>
     <header id="main-header">
-      <h1>Play Tic Tac Toe</h1>
-      <p>
-        Build with HTML, CSS, javaScript and - of course - loooots of looove!
-      </p>
+      <h1>Tic Tac Toe</h1>
+      <p>It took me too much time you better play this game !!!</p>
     </header>
     <main>
       <!------------------------- MODAL --------------------------->
@@ -34,7 +33,7 @@
         <form>
           <div class="form-control">
             <label for="playername">Player Name</label>
-            <input type="text" name="username" id="playername" required />
+            <input type="text" name="username" id="playername" required maxlength="14"/>
           </div>
           <div id="button-div">
             <button type="reset" class="btn btn-alternative" id="cancel">
@@ -88,15 +87,17 @@
           <h2><span id="winner">Player X</span> won!</h2>
           <p>Click "Start new game"</p>
         </article>
-        <p>It is your turn <span id="active-player-name">PLAYER NAME</span>!</p>
+        <p>
+          It is your turn <span class="active-player-name">PLAYER NAME</span>!
+        </p>
         <ol id="game-board">
-          <li id="block1" ></li>
+          <li id="block1"></li>
           <li id="block2"></li>
           <li id="block3"></li>
 
           <li id="block4"></li>
           <li id="block5"></li>
-          <li id="block6" ></li>
+          <li id="block6"></li>
 
           <li id="block7"></li>
           <li id="block8"></li>

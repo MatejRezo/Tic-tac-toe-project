@@ -2,6 +2,7 @@ let editPlayer1BtnElement = document.getElementById("edit-player-1-btn");
 let editPlayer2BtnElement = document.getElementById("edit-player-2-btn");
 let player1name = document.querySelector(".player1-name");
 let player2name = document.querySelector(".player2-name");
+let winner = document.getElementById("winner");
 
 const playername = document.getElementById("playername");
 const setPlayerNameBtn = document.getElementById("setPlayerNameBtn");
@@ -10,6 +11,8 @@ const backdrop = document.getElementById("backdrop");
 const cancel = document.getElementById("cancel");
 const startGameBtn = document.getElementById("start-game-button");
 const activeGame = document.getElementById("active-game");
+const activePlayerName = document.querySelector(".active-player-name");
+const gameOverTab = document.getElementById("game-over");
 
 const allblockElements = document.querySelectorAll("#game-board li");
 const block1 = document.getElementById("block1");

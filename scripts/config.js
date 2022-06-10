@@ -5,14 +5,16 @@ function openPlayerConfig() {
 
 //PLAYER CAN STILL LEAVE EMPTY....VALIDATION NEEDED
 function setPlayerName() {
-  if (editPlayer1BtnElement == true) {
-    player1name.textContent = playername.value;
-  } else if (editPlayer2BtnElement == true) {
-    player2name.textContent = playername.value;
+  if (playername.value != "") {
+    if (editPlayer1BtnElement == true) {
+      player1name.textContent = playername.value.toUpperCase();
+    } else if (editPlayer2BtnElement == true) {
+      player2name.textContent = playername.value.toUpperCase();
+    }
+    modal.style.display = "none";
+    backdrop.style.display = "none";
+    event.preventDefault();
   }
-  modal.style.display = "none";
-  backdrop.style.display = "none";
-  event.preventDefault();
 }
 
 function cancelEditingPlayerName() {
@@ -22,7 +24,13 @@ function cancelEditingPlayerName() {
   editPlayer2BtnElement = "false";
 }
 
-function validateForm() {}
+function enableAllblocks(block) {
+  block.classList.remove("disableElement");
+}
+
+function disableblock(block) {
+  block.classList.add("disableElement");
+}
 
 // playername=
 // setPlayerNameBtn

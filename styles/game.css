@@ -21,7 +21,7 @@
     margin: 0.5rem 0;
 }
 
-#active-player-name {
+.active-player-name {
     font-weight: bold;
     color: rgb(50, 5, 87);
 }
@@ -53,8 +53,9 @@
 
 }
 
-#game-board li.disabled {
+#game-board li.disableElement {
     background-color: rgb(121, 21, 214);
     color: white;
     cursor: default;
+    pointer-events: none;
 }
