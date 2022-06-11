@@ -26,6 +26,7 @@ function cancelEditingPlayerName() {
 
 function enableAllblocks(block) {
   block.classList.remove("disableElement");
+  block.classList.add("element_hover");
 }
 
 function disableblock(block) {

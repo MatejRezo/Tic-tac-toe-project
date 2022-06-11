@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="styles/overlay.css" />
     <link rel="stylesheet" href="styles/configuration.css" />
     <link rel="stylesheet" href="styles/game.css" />
+    <script src="scripts/gameOverEvents.js" defer></script>
     <script src="scripts/config.js" defer></script>
     <script src="scripts/game.js" defer></script>
     <script src="scripts/app.js" defer></script>
@@ -62,6 +63,20 @@
               </button>
             </article>
           </li>
+
+          <li id="score-tab">
+            <h2>Score</h2>
+            <div id="score-div">
+              <p id="player1-score">0</p>
+              <p>-</p>
+              <p id="player2-score">0</p>
+            </div>
+            <div id="draws-div">
+              <p >Draws</p>
+              <p id="draw-score">0</p>
+            </div>
+          </li>
+
           <li>
             <article>
               <h2>Player 2</h2>
@@ -87,10 +102,15 @@
           <h2><span id="winner">Player X</span> won!</h2>
           <p>Click "Start new game"</p>
         </article>
+        <article id="game-ended-in-draw">
+          <h3>No winners</h3>
+          <h2>YOU BOTH LOST!</h2>
+          <p>Click "Start new game"</p>
+        </article>
         <p>
           It is your turn <span class="active-player-name">PLAYER NAME</span>!
         </p>
-        <ol id="game-board">
+        <ol id="game-board"  >
           <li id="block1"></li>
           <li id="block2"></li>
           <li id="block3"></li>
