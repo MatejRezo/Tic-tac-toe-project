@@ -21,17 +21,63 @@ const gameEndedDraw = document.getElementById("game-ended-in-draw");
 const scoreTab = document.getElementById("score-tab");
 
 const allblockElements = document.querySelectorAll("#game-board li");
-const block1 = document.getElementById("block1");
-const block2 = document.getElementById("block2");
-const block3 = document.getElementById("block3");
-const block4 = document.getElementById("block4");
-const block5 = document.getElementById("block5");
-const block6 = document.getElementById("block6");
-const block7 = document.getElementById("block7");
-const block8 = document.getElementById("block8");
-const block9 = document.getElementById("block9");
 
-let gameOver = false;
+/******the shortest version******/
+allblockElements.forEach((blockElement) => {blockElement.addEventListener("click", ({ target }) => allInOneFunction(target));
+});
+
+
+/******mid-short version******/
+// allblockElements.forEach((element) =>
+//   element.addEventListener("click", (event) => allInOneFunction(event.target))
+// );
+
+/******mid version******/
+// allblockElements.forEach(function () {
+  //   blockElement.addEventListener("click", function () {
+    //     allInOneFunction(target);
+    //   });
+    // });
+    
+    /******the longest version******/
+    // const block1 = document.getElementById("block1");
+    // const block2 = document.getElementById("block2");
+    // const block3 = document.getElementById("block3");
+    // const block4 = document.getElementById("block4");
+    // const block5 = document.getElementById("block5");
+    // const block6 = document.getElementById("block6");
+    // const block7 = document.getElementById("block7");
+    // const block8 = document.getElementById("block8");
+    // const block9 = document.getElementById("block9");
+    // block1.onclick = () => {
+    //   allInOneFunction(block1);
+    // };
+    // block2.onclick = () => {
+    //   allInOneFunction(block2);
+    // };
+    // block3.onclick = () => {
+    //   allInOneFunction(block3);
+    // };
+    // block4.onclick = () => {
+    //   allInOneFunction(block4);
+    // };
+    // block5.onclick = () => {
+    //   allInOneFunction(block5);
+    // };
+    // block6.onclick = () => {
+    //   allInOneFunction(block6);
+    // };
+    // block7.onclick = () => {
+    //   allInOneFunction(block7);
+    // };
+    // block8.onclick = () => {
+    //   allInOneFunction(block8);
+    // };
+    // block9.onclick = () => {
+    //   allInOneFunction(block9);
+    // };
+    
+    let gameOver = false;
 
 editPlayer1BtnElement.onclick = () => {
   editPlayer2BtnElement = false;
@@ -55,38 +101,3 @@ startGameBtn.onclick = () => {
 setPlayerNameBtn.addEventListener("click", setPlayerName);
 cancel.addEventListener("click", cancelEditingPlayerName);
 
-block1.onclick = () => {
-  allInOneFunction(block1);
-};
-
-block2.onclick = () => {
-  allInOneFunction(block2);
-};
-
-block3.onclick = () => {
-  allInOneFunction(block3);
-};
-
-block4.onclick = () => {
-  allInOneFunction(block4);
-};
-
-block5.onclick = () => {
-  allInOneFunction(block5);
-};
-
-block6.onclick = () => {
-  allInOneFunction(block6);
-};
-
-block7.onclick = () => {
-  allInOneFunction(block7);
-};
-
-block8.onclick = () => {
-  allInOneFunction(block8);
-};
-
-block9.onclick = () => {
-  allInOneFunction(block9);
-};

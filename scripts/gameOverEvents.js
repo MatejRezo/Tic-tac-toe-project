@@ -1,3 +1,4 @@
+
 function is3InRow() {
   if (
     block1.innerHTML != "" &&
